@@ -1,0 +1,24 @@
+---
+layout: default.njk
+---
+
+<ul class="divisison">
+    {% for group in collections.feedback %}
+        <li class="division" id="division-{{group.division.name}}">
+            <h2>{{group.division.name}}</h2>
+            <ul class="responses">
+                {% for response in group.responses %}
+                    <li class="response" id="story-{{response.name}}">
+                        <h3>{{response.name}}</h3>
+                        <h4>{{response.title}}</h4>
+                        <p>
+                            {{response.response}}
+                        </p>
+
+
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Karen</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <style>
+      {% include "assets/styles/site.css" %}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>
+            Thank You Karen
+        </h1>
+    </header>
+
+
+    <main>
+
+        {{content | safe}}
+
+    </main>
+
+    {% include "assets/icons/pattern.svg" %}
+
+</body>
+</html>

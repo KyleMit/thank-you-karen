@@ -1,0 +1,77 @@
+[{
+        "sort": 2,
+        "name": "Office of the Commissioner"
+    },
+    {
+        "sort": 3,
+        "name": "Senior Policy & Legal Advisor"
+    },
+    {
+        "sort": 4,
+        "name": "Business Office"
+    },
+    {
+        "sort": 5,
+        "name": "Operations"
+    },
+    {
+        "sort": 6,
+        "name": "Planning and Health Care Quality"
+    },
+    {
+        "sort": 7,
+        "name": "ADS - VDH Support Staff"
+    },
+    {
+        "sort": 8,
+        "name": "ADAP"
+    },
+    {
+        "sort": 9,
+        "name": "Public Health"
+    },
+    {
+        "sort": 11,
+        "name": "Division of Emergency Preparedness, Response & Injury Prevention"
+    },
+    {
+        "sort": 12,
+        "name": "Environmental Health"
+    },
+    {
+        "sort": 13,
+        "name": "Health Promotion Disease Prevention"
+    },
+    {
+        "sort": 14,
+        "name": "Health Surveillance"
+    },
+    {
+        "sort": 15,
+        "name": "HS - Infectious Disease"
+    },
+    {
+        "sort": 17,
+        "name": "HS - Public Health Statistics"
+    },
+    {
+        "sort": 18,
+        "name": "Maternal Child Health"
+    },
+    {
+        "sort": 20,
+        "name": "AHS Data Services"
+    },
+    {
+        "sort": 21,
+        "name": "DAIL"
+    },
+    {
+        "sort": 22,
+        "name": "ADS Shared Services"
+    },
+    {
+        "sort": 23,
+        "name": "ASTHO"
+    }
+]
