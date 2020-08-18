@@ -1,5 +1,11 @@
 module.exports = function(eleventyConfig) {
 
+    eleventyConfig.addPassthroughCopy("assets/content");
+    eleventyConfig.addPassthroughCopy("favicon.ico");
+
+    let md = require("markdown-it")()
+    eleventyConfig.addFilter("md", (content) => md.render(content));
+
     eleventyConfig.addCollection("feedback", (col) => {
         let { responses, divisions } = col.items[0].data
 

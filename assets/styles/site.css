@@ -11,8 +11,9 @@ html {
 }
 
 body {
-    max-width: 65rem;
+    max-width: 45rem;
     margin: 0 auto;
+    line-height: 1.5em;
     padding: 15px;
     background: #f5f4fa;
     font-family: 'Noto Sans', sans-serif;
@@ -39,6 +40,7 @@ main {
     background: #ffffff7a;
     z-index: 1;
     position: relative;
+    box-shadow: 0px 0px 20px 0px white;
 }
 
 
@@ -53,17 +55,33 @@ li {
 }
 
 
-/* colors */
+/* typography */
 
 h2 {
     color: #0d327c;
+    margin-top: 50px;
 }
 
 h3 {
     color: #328ec8;
+    margin-top: 35px;
+    margin-bottom: 5px;
 }
 
-h3 code {
-    color: #73aed3;
-    font-size: 1.1em;
+h4 {
+    color: #545454;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* sections */
+
+h2 {
+    position: sticky;
+    top: 0;
+    background: #fffffff5;
+    box-shadow: 0px 0px 10px 0px white;
+    padding: 10px 5px;
+    text-align: center;
 }

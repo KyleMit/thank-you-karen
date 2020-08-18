@@ -5,14 +5,14 @@ layout: default.njk
 <ul class="divisison">
     {% for group in collections.feedback %}
         <li class="division" id="division-{{group.division.name}}">
-            <h2>{{group.division.name}}</h2>
+            <h2>~ {{group.division.name}} ~</h2>
             <ul class="responses">
                 {% for response in group.responses %}
                     <li class="response" id="story-{{response.name}}">
                         <h3>{{response.name}}</h3>
                         <h4>{{response.title}}</h4>
                         <p>
-                            {{response.response}}
+                            {{response.response | md | safe}}
                         </p>
 
 
@@ -22,3 +22,12 @@ layout: default.njk
         </li>
     {% endfor %}
 </ul>
+
+<h3>Shayla Livingston</h3>
+<h4>PH Policy Advisor</h4>
+
+<video controls width="100%">
+
+    <source src="/assets/content/shayla.mov">
+
+</video>
