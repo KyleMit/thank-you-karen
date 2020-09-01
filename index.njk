@@ -10,6 +10,9 @@ layout: default.njk
                 {% for response in group.responses %}
                     <li class="response" id="story-{{response.name}}">
                         <h3>{{response.name}}</h3>
+                        {% if response.profile %}
+                            <img src="/assets/profiles/{{response.profile}}" alt="{{response.name}} profile picture" class="profile">
+                        {% endif %}
                         <h4>{{response.title}}</h4>
                         <p>
                             {{response.response | md | safe}}

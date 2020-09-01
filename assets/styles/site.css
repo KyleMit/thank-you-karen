@@ -85,3 +85,10 @@ h2 {
     padding: 10px 5px;
     text-align: center;
 }
+
+.profile {
+    width: 65px;
+    border-radius: 50%;
+    float: left;
+    margin: 20px;
+}
