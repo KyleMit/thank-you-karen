@@ -62,16 +62,19 @@ h2 {
     margin-top: 50px;
 }
 
+.individual-name {
+    display: flex;
+    margin: 10px 0;
+}
+
 h3 {
     color: #328ec8;
-    margin-top: 35px;
-    margin-bottom: 5px;
+    margin: 0 15px 0 0;
 }
 
 h4 {
     color: #545454;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 
@@ -86,9 +89,13 @@ h2 {
     text-align: center;
 }
 
+.response {
+    margin-bottom: 65px;
+}
+
 .profile {
-    width: 65px;
+    width: 100px;
     border-radius: 50%;
     float: left;
-    margin: 20px;
+    margin: 14px 14px 14px 0;
 }

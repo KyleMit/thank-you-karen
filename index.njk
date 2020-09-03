@@ -9,11 +9,13 @@ layout: default.njk
             <ul class="responses">
                 {% for response in group.responses %}
                     <li class="response" id="story-{{response.name}}">
-                        <h3>{{response.name}}</h3>
+                        <div class="individual-name">
+                            <h3>{{response.name}}</h3>
+                            <h4>{{response.title}}</h4>
+                        </div>
                         {% if response.profile %}
                             <img src="/assets/profiles/{{response.profile}}" alt="{{response.name}} profile picture" class="profile">
                         {% endif %}
-                        <h4>{{response.title}}</h4>
                         <p>
                             {{response.response | md | safe}}
                         </p>
