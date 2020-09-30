@@ -1,7 +1,6 @@
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("assets/content");
-    eleventyConfig.addPassthroughCopy("assets/profiles");
     eleventyConfig.addPassthroughCopy("favicon.ico");
 
     let md = require("markdown-it")()
@@ -24,6 +23,7 @@ module.exports = function(eleventyConfig) {
 
 
     return {
+        templateFormats: ["njk"],
         dir: {
             "data": "data",
             "includes": "assets",

@@ -1,17 +1,18 @@
 {
-    "name": "@ads-vdh/farewell",
+    "name": "thank-you-karen",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "Thank you Karen",
     "scripts": {
+        "clean": "npx rimraf _site",
+        "image": "node cli/images.js",
+        "prebuild": "npm run image",
         "build": "npx @11ty/eleventy",
         "serve": "npx @11ty/eleventy --serve"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "KyleMit",
     "dependencies": {
         "@11ty/eleventy": "^0.11.0",
-        "markdown-it": "^11.0.0"
+        "markdown-it": "^11.0.0",
+        "sharp": "^0.26.0"
     }
 }

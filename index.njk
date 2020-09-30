@@ -13,14 +13,16 @@ layout: default.njk
                             <h3>{{response.name}}</h3>
                             <h4>{{response.title}}</h4>
                         </div>
+
                         {% if response.profile %}
-                            <img src="/assets/profiles/{{response.profile}}" alt="{{response.name}} profile picture" class="profile">
+                            <img src="/assets/profiles-min/{{response.profile}}.jpg" alt="{{response.name}} profile picture" class="profile">
+                        {% else %}
+                            <span class="profile">{{response.initials}}</span>
                         {% endif %}
-                        <p>
+
+                        <div class="msg">
                             {{response.response | md | safe}}
-                        </p>
-
-
+                        </div>
                     </li>
                 {% endfor %}
             </ul>

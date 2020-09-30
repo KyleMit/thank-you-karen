@@ -57,14 +57,24 @@ li {
 
 /* typography */
 
+h1 {
+    margin-top: 80px;
+}
+
+.division:first-child h2 {
+    margin-top: 40px;
+}
+
 h2 {
     color: #0d327c;
-    margin-top: 50px;
+    margin-top: 90px;
+    margin-bottom: 45px;
 }
 
 .individual-name {
     display: flex;
     margin: 10px 0;
+    align-items: baseline;
 }
 
 h3 {
@@ -75,6 +85,15 @@ h3 {
 h4 {
     color: #545454;
     margin: 0;
+}
+
+blockquote {
+    border-left: 3px solid #66aad6;
+    padding-left: 5px;
+    margin-left: 0;
+    font-style: italic;
+    background: #66aad61a;
+    border-radius: 1px;
 }
 
 
@@ -95,7 +114,18 @@ h2 {
 
 .profile {
     width: 100px;
+    height: 100px;
     border-radius: 50%;
     float: left;
     margin: 14px 14px 14px 0;
+    shape-outside: circle(50%);
+}
+
+span.profile {
+    background: #397aca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3em;
 }
