@@ -97,6 +97,13 @@ blockquote {
 }
 
 
+/* utilities */
+
+.clear {
+    clear: both;
+}
+
+
 /* sections */
 
 h2 {
@@ -110,6 +117,10 @@ h2 {
 
 .response {
     margin-bottom: 65px;
+}
+
+.response.last {
+    margin-top: 60px;
 }
 
 .profile {
@@ -128,4 +139,25 @@ span.profile {
     justify-content: center;
     color: white;
     font-size: 3em;
+}
+
+
+/* events */
+
+.vdh-event {
+    margin: 15px 0;
+    border: 3px solid white;
+    box-shadow: 1px 1px 1px #8080802e;
+    background: #ffffff87;
+    border-radius: 2px;
+}
+
+.vdh-event img {
+    max-width: 100%;
+}
+
+.vdh-event figcaption {
+    line-height: 1em;
+    margin-bottom: 5px;
+    padding-left: 5px;
 }

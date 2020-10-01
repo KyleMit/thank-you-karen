@@ -6,6 +6,10 @@ module.exports = function(eleventyConfig) {
     let md = require("markdown-it")()
     eleventyConfig.addFilter("md", (content) => md.render(content));
 
+    eleventyConfig.addFilter("prettyDate", (dateStr) => {
+        return (new Date(dateStr)).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+    })
+
     eleventyConfig.addCollection("feedback", (col) => {
         let { responses, divisions } = col.items[0].data
 

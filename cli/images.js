@@ -5,26 +5,41 @@ const sharp = require("sharp")
 main()
 
 async function main() {
-    // create output dir
-    let outputDir = path.join(__dirname, "../_site/assets/profiles-min")
-    await fs.mkdir(outputDir, { recursive: true });
 
 
-    let profileDir = path.join(__dirname, "../assets/profiles")
-    let profilePaths = await fs.readdir(profileDir)
+    await resizeAlbum("../assets/profiles", "../_site/assets/profiles-min", 100, 100)
+    await resizeAlbum("../assets/events", "../_site/assets/events-min", 674)
 
+
+}
+
+
+async function resizeAlbum(inputDir, outputDir, width, height) {
+    let inputDirPath = path.join(__dirname, inputDir)
+    let outputDirPath = path.join(__dirname, outputDir)
+
+    // guarantee output path exists
+    await fs.mkdir(outputDirPath, { recursive: true });
+
+    // read paths in input dir
+    let profilePaths = await fs.readdir(inputDirPath)
+
+    // async loop through all paths
     await Promise.all(profilePaths.map(async(fileName) => {
 
-        let filePath = path.join(profileDir, fileName)
-        let outputPath = path.join(outputDir, fileName)
+        let filePath = path.join(inputDirPath, fileName)
+        let outputPath = path.join(outputDirPath, fileName)
         let outputExt = outputPath.substr(0, outputPath.lastIndexOf(".")) + ".jpg";
 
-        return sharp(filePath)
-            .resize(100, 100)
-            .toFile(outputExt);
+        try {
+            return sharp(filePath)
+                .resize(width, height)
+                .toFormat('jpeg')
+                .toFile(outputExt);
+
+        } catch (error) {
+            console.log(error, filePath)
+        }
 
     }));
-
-
-
 }

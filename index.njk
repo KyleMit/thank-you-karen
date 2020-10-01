@@ -5,7 +5,7 @@ layout: default.njk
 <ul class="divisison">
     {% for group in collections.feedback %}
         <li class="division" id="division-{{group.division.name}}">
-            <h2>~ {{group.division.name}} ~</h2>
+            <h2>~&nbsp;{{group.division.name}}&nbsp;~</h2>
             <ul class="responses">
                 {% for response in group.responses %}
                     <li class="response" id="story-{{response.name}}">
@@ -23,18 +23,34 @@ layout: default.njk
                         <div class="msg">
                             {{response.response | md | safe}}
                         </div>
+                        <div class="clear"></div>
                     </li>
                 {% endfor %}
             </ul>
+            {% set event = events[loop.index0]%}
+            <figure class="vdh-event">
+                <img src="/assets/events-min/{{event.path}}" alt="{{event.title}}">
+                <figcaption>
+                    <strong>{{event.date | prettyDate}}</strong> -
+                    {{event.title}}
+                </figcaption>
+            </figure>
         </li>
     {% endfor %}
+
+    <li class="response last" id="story-shayla">
+        <div class="individual-name">
+            <h3>Shayla Livingston</h3>
+            <h4>PH Policy Advisor</h4>
+        </div>
+
+
+        <video controls width="100%">
+
+            <source src="/assets/content/shayla.mov">
+
+        </video>
+
+    </li>
+
 </ul>
-
-<h3>Shayla Livingston</h3>
-<h4>PH Policy Advisor</h4>
-
-<video controls width="100%">
-
-    <source src="/assets/content/shayla.mov">
-
-</video>
