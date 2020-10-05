@@ -123,7 +123,7 @@ h2 {
     margin-top: 60px;
 }
 
-.profile {
+.profiles-sprite {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -133,7 +133,7 @@ h2 {
 }
 
 span.profile {
-    background: #397aca;
+    background-color: #397aca;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,7 +157,6 @@ span.profile {
 }
 
 .vdh-event figcaption {
-    line-height: 1em;
-    margin-bottom: 5px;
+    line-height: 1.6em;
     padding-left: 5px;
 }
