@@ -26,6 +26,12 @@ module.exports = function(eleventyConfig) {
         return feedback;
     });
 
+    eleventyConfig.setBrowserSyncConfig({
+        open: "local",
+        startPath: "/thank-you.html",
+        codeSync: false,
+        ui: false,
+    });
 
     return {
         templateFormats: ["njk"],
