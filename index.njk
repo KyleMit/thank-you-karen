@@ -31,8 +31,8 @@ permalink: thank-you.html
             </ul>
             {% set event = events[loop.index0]%}
             <figure class="vdh-event">
-                {# <img src="/assets/events-min/{{event.path}}" alt="{{event.title}}"> #}
-                <div class="events-sprite events-{{event.path}}" title="{{event.title}}"></div>
+                <img src="/assets/events-min/{{event.path}}.jpg" alt="{{event.title}}" width="674" loading="lazy">
+                {# <div class="events-sprite events-{{event.path}}" title="{{event.title}}"></div> #}
                 <figcaption>
                     <strong>{{event.date | prettyDate}}</strong> -
                     {{event.title}}

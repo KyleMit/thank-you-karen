@@ -14,7 +14,7 @@ async function main() {
     await resizeAlbum("../assets/events", "../_site/assets/events-min", 674)
 
     await spritifyImages("../_site/assets/profiles-min/*.jpg", "../assets/sprites/profiles.jpg", "../assets/styles/profiles.css", "profiles-", "/assets/sprites/profiles.jpg")
-    await spritifyImages("../_site/assets/events-min/*.jpg", "../assets/sprites/events.jpg", "../assets/styles/events.css", "events-", "/assets/sprites/events.jpg")
+        //await spritifyImages("../_site/assets/events-min/*.jpg", "../assets/sprites/events.jpg", "../assets/styles/events.css", "events-", "/assets/sprites/events.jpg")
 
 }
 
