@@ -4,8 +4,7 @@
     "description": "Thank you Karen",
     "scripts": {
         "clean": "npx rimraf _site",
-        "image": "node cli/images.js",
-        "prebuild": "npm run image",
+        "prebuild": "node utils/prebuild.js",
         "build": "npx @11ty/eleventy",
         "serve": "npx @11ty/eleventy --serve"
     },
