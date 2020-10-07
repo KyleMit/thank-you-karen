@@ -72,6 +72,7 @@ h2 {
 
 .individual-name {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px 0;
     align-items: baseline;
 }
@@ -158,4 +159,61 @@ span.profiles-sprite {
 .vdh-event figcaption {
     line-height: 1.6em;
     padding-left: 5px;
+}
+
+
+/* customize scrollbar */
+
+::-webkit-scrollbar {
+    width: 18px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: #ffffff85;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #328ec8;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: #1d6da0;
+}
+
+
+/* Buttons */
+
+ ::-webkit-scrollbar-button:single-button {
+    background-color: #ffffff85;
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+
+/* Up */
+
+ ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #0d327c transparent;
+}
+
+ ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #1d6da0 transparent;
+}
+
+
+/* Down */
+
+ ::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #0d327c transparent transparent transparent;
+}
+
+ ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #1d6da0 transparent transparent transparent;
 }

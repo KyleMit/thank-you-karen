@@ -4,10 +4,13 @@ permalink: thank-you.html
 ---
 
 <ul class="divisison">
+
     {% for group in collections.feedback %}
         <li class="division" id="division-{{group.division.name}}">
             <h2>~&nbsp;{{group.division.name}}&nbsp;~</h2>
+
             <ul class="responses">
+
                 {% for response in group.responses %}
                     <li class="response" id="story-{{response.name}}">
                         <div class="individual-name">
@@ -27,7 +30,9 @@ permalink: thank-you.html
                         <div class="clear"></div>
                     </li>
                 {% endfor %}
+
             </ul>
+
             {% set event = events[loop.index0]%}
             <figure class="vdh-event">
                 <img src="/assets/events-min/{{event.path}}.jpg" alt="{{event.title}}" width="674" loading="lazy">
@@ -36,6 +41,7 @@ permalink: thank-you.html
                     {{event.title}}
                 </figcaption>
             </figure>
+
         </li>
     {% endfor %}
 
