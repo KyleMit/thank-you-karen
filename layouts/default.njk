@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You Karen</title>
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+
+    {% set favicon %}{% include "assets/favicon.svg" %}{% endset %}
+    <link rel="shortcut icon" href="data:image/svg+xml,{{favicon | urlencode}}" type="image/svg+xml" />
+
 
     <style>
         {% include "assets/styles/fonts.css" %}
@@ -18,7 +22,7 @@
 </head>
 <body>
 
-   {% include "assets/icons/pattern.svg" %}
+    {% include "assets/icons/pattern.svg" %}
 
     <header>
         <h1>

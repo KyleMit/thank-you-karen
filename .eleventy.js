@@ -3,7 +3,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets/fonts");
     eleventyConfig.addPassthroughCopy("assets/sprites");
     eleventyConfig.addPassthroughCopy("assets/content");
-    eleventyConfig.addPassthroughCopy("favicon.ico");
+    eleventyConfig.addPassthroughCopy({ "assets/favicon.ico": "/favicon.ico" });
+
 
     let md = require("markdown-it")()
     eleventyConfig.addFilter("md", (content) => md.render(content));
