@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
 
+    eleventyConfig.addPassthroughCopy("assets/fonts");
     eleventyConfig.addPassthroughCopy("assets/sprites");
     eleventyConfig.addPassthroughCopy("assets/content");
     eleventyConfig.addPassthroughCopy("favicon.ico");
@@ -30,7 +31,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
         open: "local",
         startPath: "/thank-you.html",
-        codeSync: false,
         ui: false,
     });
 

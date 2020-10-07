@@ -16,7 +16,6 @@ body {
     line-height: 1.5em;
     padding: 15px;
     background: #f5f4fa;
-    font-family: 'Noto Sans', sans-serif;
 }
 
 #background {
@@ -132,7 +131,7 @@ h2 {
     shape-outside: circle(50%);
 }
 
-span.profile {
+span.profiles-sprite {
     background-color: #397aca;
     display: flex;
     align-items: center;
