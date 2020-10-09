@@ -14,7 +14,7 @@ async function main() {
     await resizeAlbum("../assets/events", "../_site/assets/events-min", 674)
 
     // create sprite
-    await spritifyImages("../_site/assets/profiles-min/*.jpg", "../assets/sprites/profiles.jpg", "../assets/styles/profiles.css", "profiles-", "/assets/sprites/profiles.jpg")
+    await spritifyImages("../_site/assets/profiles-min/*.jpg", "../_site/assets/sprites/profiles.jpg", "../assets/styles/profiles.css", "profiles-", "/assets/sprites/profiles.jpg")
 
     // create next gen image formats
     await processImages("../_site/assets/events-min")
@@ -49,11 +49,15 @@ async function processImages(inputDir) {
 }
 
 
-async function spritifyImages(src, sprite, style, prefix, spriteUrl) {
+async function spritifyImages(src, dest, style, prefix, spriteUrl) {
 
     let srcPath = path.join(__dirname, src)
-    let spritePath = path.join(__dirname, sprite)
+    let destPath = path.join(__dirname, dest)
     let stylePath = path.join(__dirname, style)
+
+    let destDir = path.dirname(destPath)
+        // guarantee output path exists
+    await fs.mkdir(destDir, { recursive: true });
 
     try {
 
@@ -65,7 +69,7 @@ async function spritifyImages(src, sprite, style, prefix, spriteUrl) {
             layoutOptions: {
                 padding: 5
             },
-            spritePath: spritePath,
+            spritePath: destPath,
             stylesheetPath: stylePath,
             stylesheet: "css",
             compositor: "jimp",
