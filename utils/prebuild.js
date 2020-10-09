@@ -9,11 +9,43 @@ main()
 
 async function main() {
 
+    // standardize output sizes
     await resizeAlbum("../assets/profiles", "../_site/assets/profiles-min", 100, 100)
     await resizeAlbum("../assets/events", "../_site/assets/events-min", 674)
 
+    // create sprite
     await spritifyImages("../_site/assets/profiles-min/*.jpg", "../assets/sprites/profiles.jpg", "../assets/styles/profiles.css", "profiles-", "/assets/sprites/profiles.jpg")
 
+    // create next gen image formats
+    await processImages("../_site/assets/events-min")
+    await processImages("../_site/assets/sprites")
+
+}
+
+async function processImages(inputDir) {
+    let inputDirPath = path.join(__dirname, inputDir)
+
+    // read paths in input dir
+    let imagePaths = await fs.readdir(inputDirPath)
+
+    let jpgPaths = imagePaths.filter(p => p.endsWith("jpg"))
+
+    // async loop through all paths
+    await Promise.all(jpgPaths.map(async(fileName) => {
+
+        let filePath = path.join(inputDirPath, fileName)
+        let outputPath = filePath.substr(0, filePath.lastIndexOf(".")) + ".webp";
+
+        try {
+            return sharp(filePath)
+                .toFormat('webp')
+                .toFile(outputPath);
+
+        } catch (error) {
+            console.log(error, filePath)
+        }
+
+    }));
 }
 
 

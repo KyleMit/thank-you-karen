@@ -21,7 +21,7 @@ permalink: thank-you.html
                         {% if response.profile %}
                             <span class="profiles-sprite profiles-{{response.profile}}" title="{{response.name}}" ></span>
                         {% else %}
-                            <span class="profiles-sprite">{{response.initials}}</span>
+                            <span class="profiles-letters">{{response.initials}}</span>
                         {% endif %}
 
                         <div class="msg">
@@ -35,7 +35,11 @@ permalink: thank-you.html
 
             {% set event = events[loop.index0]%}
             <figure class="vdh-event">
-                <img src="/assets/events-min/{{event.path}}.jpg" alt="{{event.title}}" width="674" loading="lazy">
+                <picture>
+                    <source srcset="/assets/events-min/{{event.path}}.webp" type="image/webp">
+                    <source srcset="/assets/events-min/{{event.path}}.jpg" type="image/jpeg">
+                    <img src="/assets/events-min/{{event.path}}.jpg" alt="{{event.title}}" width="674" loading="lazy">
+                </picture>
                 <figcaption>
                     <strong>{{event.date | prettyDate}}</strong> -
                     {{event.title}}

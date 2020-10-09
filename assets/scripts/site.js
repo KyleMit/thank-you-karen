@@ -1,4 +1,24 @@
-// Fout with Class per https://www.zachleat.com/web/comprehensive-webfonts/#fout-class
+if (!canUseWebP()) {
+    document.documentElement.className += " no-webp"
+}
+
+// detect webp - https://stackoverflow.com/a/27232658/1366033
+function canUseWebP() {
+    var elem = document.createElement('canvas');
+
+    if (!!(elem.getContext && elem.getContext('2d'))) {
+        // was able or not to get WebP representation
+        return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    }
+
+    // very old browser like IE 8, canvas not supported
+    return false;
+}
+
+
+
+
+// Fout with Class - https://www.zachleat.com/web/comprehensive-webfonts/#fout-class
 (function() {
 
     // Optimization for Repeat Views

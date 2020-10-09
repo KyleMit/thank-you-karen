@@ -123,7 +123,8 @@ h2 {
     margin-top: 60px;
 }
 
-.profiles-sprite {
+.profiles-sprite,
+.profiles-letters {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -132,7 +133,7 @@ h2 {
     shape-outside: circle(50%);
 }
 
-span.profiles-sprite {
+.profiles-letters {
     background-color: #397aca;
     display: flex;
     align-items: center;
@@ -216,4 +217,12 @@ span.profiles-sprite {
 
  ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
     border-color: #1d6da0 transparent transparent transparent;
+}
+
+.profiles-sprite {
+    background-image: url('/assets/sprites/profiles.webp')
+}
+
+.no-webp .profiles-sprite {
+    background-image: url('/assets/sprites/profiles.jpg')
 }
